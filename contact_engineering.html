@@ -145,6 +145,41 @@
             transform: translateY(0);
         }
 
+    
+        /* Mobile Menu Overlay Animation */
+        #mobile-menu-overlay {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-origin: top right;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+        }
+        #mobile-menu-overlay.open {
+            transform: scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #mobile-menu-overlay:not(.open) {
+            transform: scale(0);
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Hamburger Button Animation */
+        #mobile-menu-btn .line-1,
+        #mobile-menu-btn .line-2,
+        #mobile-menu-btn .line-3 {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #mobile-menu-btn.open .line-1 {
+            transform: translateY(9px) rotate(-45deg);
+        }
+        #mobile-menu-btn.open .line-2 {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        #mobile-menu-btn.open .line-3 {
+            transform: translateY(-9px) rotate(45deg);
+        }
+
     </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col">
@@ -164,18 +199,39 @@
     <a class="hidden md:inline-flex items-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg" href="contact_engineering.html" style="background:#d1121b;">
         Contact
     </a>
-    <button class="md:hidden text-on-surface" onclick="const m = document.getElementById('mobile-menu'); m.classList.toggle('hidden')">
-        <span class="material-symbols-outlined text-3xl">menu</span>
+    <button id="mobile-menu-btn" class="md:hidden text-on-surface focus:outline-none z-50 relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/5 transition-colors">
+        <div class="w-6 h-5 flex flex-col justify-between items-end">
+            <span class="line-1 w-6 h-0.5 bg-on-surface rounded-full"></span>
+            <span class="line-2 w-5 h-0.5 bg-on-surface rounded-full"></span>
+            <span class="line-3 w-6 h-0.5 bg-on-surface rounded-full"></span>
+        </div>
     </button>
 </div>
-<!-- Mobile Menu Placeholder -->
-<div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 flex flex-col gap-4 border-t border-white/10" style="font-family: 'Inter', sans-serif;">
-    <a class="text-on-surface/80 hover:text-white" href="index.html">Home</a>
-    <a class="text-on-surface/80 hover:text-white" href="legacy_leadership.html">About</a>
-    <a class="text-on-surface/80 hover:text-white" href="projects_gallery.html">Services</a>
-    <a class="text-on-surface/80 hover:text-white" href="industries_clients.html">Industries</a>
-    <a class="text-on-surface/80 hover:text-white" href="industrial_resources.html">Resources</a>
-    <a class="inline-flex items-center justify-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90" href="contact_engineering.html" style="background:#d1121b; max-width: 200px;">
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed top-[20px] right-[24px] z-40 w-[280px] rounded-[32px] bg-surface/95 backdrop-blur-2xl border border-outline-variant/30 p-6 pointer-events-none" style="font-family: 'Inter', sans-serif;">
+    <div class="flex flex-col gap-3 mt-12 mb-6">
+        <a class="mobile-nav-link text-lg font-medium text-on-surface/80 hover:text-white hover:pl-2 transition-all duration-300 py-2.5 border-b border-white/5 flex justify-between items-center" href="index.html">
+            <span>Home</span>
+            <span class="material-symbols-outlined text-sm opacity-50">arrow_forward_ios</span>
+        </a>
+        <a class="mobile-nav-link text-lg font-medium text-on-surface/80 hover:text-white hover:pl-2 transition-all duration-300 py-2.5 border-b border-white/5 flex justify-between items-center" href="legacy_leadership.html">
+            <span>About</span>
+            <span class="material-symbols-outlined text-sm opacity-50">arrow_forward_ios</span>
+        </a>
+        <a class="mobile-nav-link text-lg font-medium text-on-surface/80 hover:text-white hover:pl-2 transition-all duration-300 py-2.5 border-b border-white/5 flex justify-between items-center" href="projects_gallery.html">
+            <span>Services</span>
+            <span class="material-symbols-outlined text-sm opacity-50">arrow_forward_ios</span>
+        </a>
+        <a class="mobile-nav-link text-lg font-medium text-on-surface/80 hover:text-white hover:pl-2 transition-all duration-300 py-2.5 border-b border-white/5 flex justify-between items-center" href="industries_clients.html">
+            <span>Industries</span>
+            <span class="material-symbols-outlined text-sm opacity-50">arrow_forward_ios</span>
+        </a>
+        <a class="mobile-nav-link text-lg font-medium text-on-surface/80 hover:text-white hover:pl-2 transition-all duration-300 py-2.5 flex justify-between items-center" href="industrial_resources.html">
+            <span>Resources</span>
+            <span class="material-symbols-outlined text-sm opacity-50">arrow_forward_ios</span>
+        </a>
+    </div>
+    <a class="flex items-center justify-center text-white py-4 rounded-full text-sm font-bold shadow-lg hover:scale-[1.02] active:scale-95 transition-all duration-200" href="contact_engineering.html" style="background:#d1121b;">
         Contact
     </a>
 </div>
@@ -316,5 +372,30 @@
             revealOnScroll(); // Trigger on load
         });
 </script>
+
+<!-- Mobile Menu Fluid Control Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            
+            if (btn && overlay) {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    btn.classList.toggle('open');
+                    overlay.classList.toggle('open');
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (overlay.classList.contains('open') && !overlay.contains(e.target) && !btn.contains(e.target)) {
+                        btn.classList.remove('open');
+                        overlay.classList.remove('open');
+                    }
+                });
+            }
+        });
+</script>
+
 </body>
 </html>
