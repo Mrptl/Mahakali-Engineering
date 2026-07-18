@@ -1,365 +1,418 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mahakali Engineering | Precision in Every Process</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "secondary-fixed": "#e2e2e2",
-                      "error": "#ffb4ab",
-                      "primary-fixed-dim": "#ffb59e",
-                      "tertiary-fixed": "#dee3eb",
-                      "on-surface-variant": "#e2bfb4",
-                      "primary-fixed": "#ffdbd0",
-                      "on-primary": "#5d1800",
-                      "on-tertiary-container": "#252a31",
-                      "surface-bright": "#393939",
-                      "primary-container": "#f75f28",
-                      "tertiary": "#c2c7cf",
-                      "error-container": "#93000a",
-                      "on-primary-fixed": "#3a0b00",
-                      "surface-container-highest": "#353535",
-                      "inverse-surface": "#e5e2e1",
-                      "surface-container-lowest": "#0e0e0e",
-                      "inverse-primary": "#ad3300",
-                      "on-primary-fixed-variant": "#842500",
-                      "on-secondary-container": "#b4b5b5",
-                      "on-background": "#e5e2e1",
-                      "tertiary-container": "#8c9199",
-                      "surface": "#131313",
-                      "on-tertiary-fixed": "#171c22",
-                      "outline-variant": "#5a4139",
-                      "secondary-container": "#454747",
-                      "outline": "#a98a80",
-                      "surface-dim": "#131313",
-                      "surface-container-high": "#2a2a2a",
-                      "secondary-fixed-dim": "#c6c6c7",
-                      "on-secondary-fixed": "#1a1c1c",
-                      "secondary": "#c6c6c7",
-                      "surface-container": "#20201f",
-                      "on-tertiary": "#2c3138",
-                      "on-secondary": "#2f3131",
-                      "primary": "#ffb59e",
-                      "on-error-container": "#ffdad6",
-                      "on-tertiary-fixed-variant": "#42474e",
-                      "on-primary-container": "#521400",
-                      "background": "#131313",
-                      "surface-tint": "#ffb59e",
-                      "surface-variant": "#353535",
-                      "surface-container-low": "#1c1b1b",
-                      "on-surface": "#e5e2e1",
-                      "tertiary-fixed-dim": "#c2c7cf",
-                      "on-error": "#690005",
-                      "inverse-on-surface": "#313030",
-                      "on-secondary-fixed-variant": "#454747"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "spacing": {
-                      "margin-desktop": "64px",
-                      "component-gap": "24px",
-                      "margin-mobile": "24px",
-                      "container-max": "1440px",
-                      "gutter": "32px",
-                      "section-gap": "128px"
-              },
-              "fontFamily": {
-                      "headline-lg": [
-                              "Manrope"
-                      ],
-                      "title-md": [
-                              "Manrope"
-                      ],
-                      "display-lg": [
-                              "Manrope"
-                      ],
-                      "mono-label": [
-                              "Inter"
-                      ],
-                      "body-md": [
-                              "Inter"
-                      ],
-                      "label-caps": [
-                              "Inter"
-                      ],
-                      "body-lg": [
-                              "Inter"
-                      ],
-                      "display-xl": [
-                              "Manrope"
-                      ],
-                      "headline-lg-mobile": [
-                              "Manrope"
-                      ]
-              },
-              "fontSize": {
-                      "headline-lg": [
-                              "40px",
-                              {
-                                      "lineHeight": "48px",
-                                      "letterSpacing": "-0.01em",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "title-md": [
-                              "24px",
-                              {
-                                      "lineHeight": "32px",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "display-lg": [
-                              "56px",
-                              {
-                                      "lineHeight": "64px",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "mono-label": [
-                              "14px",
-                              {
-                                      "lineHeight": "20px",
-                                      "fontWeight": "500"
-                              }
-                      ],
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "24px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "label-caps": [
-                              "12px",
-                              {
-                                      "lineHeight": "16px",
-                                      "letterSpacing": "0.1em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "28px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "display-xl": [
-                              "72px",
-                              {
-                                      "lineHeight": "80px",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "headline-lg-mobile": [
-                              "32px",
-                              {
-                                      "lineHeight": "40px",
-                                      "fontWeight": "600"
-                              }
-                      ]
-              }
-      },
-          },
-        }
-      </script>
-<style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .glass-panel {
-            background: rgba(43, 43, 43, 0.4);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(169, 138, 128, 0.2);
-        }
-        .hero-gradient {
-            background: linear-gradient(180deg, rgba(19,19,19,0.3) 0%, rgba(19,19,19,0.8) 100%);
-        }
-        /* Floating navbar */
-        .floating-nav {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 50;
-            width: calc(100% - 48px);
-            max-width: 1200px;
-            background: rgba(19, 19, 19, 0.55);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(241, 90, 36, 0.18);
-            border-radius: 999px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04);
-            transition: all 0.3s ease;
-        }
-        .floating-nav:hover {
-            border-color: rgba(241, 90, 36, 0.35);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(241,90,36,0.08);
-        }
-    
-        /* Scroll Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+<html class="dark" lang="en">
 
-    </style>
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Mahakali Engineering | Precision in Every Process</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "secondary-fixed": "#e2e2e2",
+                                                "error": "#ffb4ab",
+                                                "primary-fixed-dim": "#ffb8b8",
+                                                "tertiary-fixed": "#dee3eb",
+                                                "on-surface-variant": "#dfb9b9",
+                                                "primary-fixed": "#ffdbd0",
+                                                "on-primary": "#590306",
+                                                "on-tertiary-container": "#252a31",
+                                                "surface-bright": "#393939",
+                                                "primary-container": "#d1121b",
+                                                "tertiary": "#c2c7cf",
+                                                "error-container": "#93000a",
+                                                "on-primary-fixed": "#3c0203",
+                                                "surface-container-highest": "#353535",
+                                                "inverse-surface": "#e5e2e1",
+                                                "surface-container-lowest": "#0e0e0e",
+                                                "inverse-primary": "#9c0b11",
+                                                "on-primary-fixed-variant": "#7c070b",
+                                                "on-secondary-container": "#b4b5b5",
+                                                "on-background": "#e5e2e1",
+                                                "tertiary-container": "#8c9199",
+                                                "surface": "#131313",
+                                                "on-tertiary-fixed": "#171c22",
+                                                "outline-variant": "#5b3636",
+                                                "secondary-container": "#454747",
+                                                "outline": "#b08e8e",
+                                                "surface-dim": "#131313",
+                                                "surface-container-high": "#2a2a2a",
+                                                "secondary-fixed-dim": "#c6c6c7",
+                                                "on-secondary-fixed": "#1a1c1c",
+                                                "secondary": "#c6c6c7",
+                                                "surface-container": "#20201f",
+                                                "on-tertiary": "#2c3138",
+                                                "on-secondary": "#2f3131",
+                                                "primary": "#ffb8b8",
+                                                "on-error-container": "#ffdad6",
+                                                "on-tertiary-fixed-variant": "#42474e",
+                                                "on-primary-container": "#4a0204",
+                                                "background": "#131313",
+                                                "surface-tint": "#ffb8b8",
+                                                "surface-variant": "#353535",
+                                                "surface-container-low": "#1c1b1b",
+                                                "on-surface": "#e5e2e1",
+                                                "tertiary-fixed-dim": "#c2c7cf",
+                                                "on-error": "#690005",
+                                                "inverse-on-surface": "#313030",
+                                                "on-secondary-fixed-variant": "#454747"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.125rem",
+                                                "lg": "0.25rem",
+                                                "xl": "0.5rem",
+                                                "full": "0.75rem"
+                                        },
+                                        "spacing": {
+                                                "margin-desktop": "64px",
+                                                "component-gap": "24px",
+                                                "margin-mobile": "24px",
+                                                "container-max": "1440px",
+                                                "gutter": "32px",
+                                                "section-gap": "128px"
+                                        },
+                                        "fontFamily": {
+                                                "headline-lg": [
+                                                        "Manrope"
+                                                ],
+                                                "title-md": [
+                                                        "Manrope"
+                                                ],
+                                                "display-lg": [
+                                                        "Manrope"
+                                                ],
+                                                "mono-label": [
+                                                        "Inter"
+                                                ],
+                                                "body-md": [
+                                                        "Inter"
+                                                ],
+                                                "label-caps": [
+                                                        "Inter"
+                                                ],
+                                                "body-lg": [
+                                                        "Inter"
+                                                ],
+                                                "display-xl": [
+                                                        "Manrope"
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "Manrope"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "headline-lg": [
+                                                        "40px",
+                                                        {
+                                                                "lineHeight": "48px",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "title-md": [
+                                                        "24px",
+                                                        {
+                                                                "lineHeight": "32px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "display-lg": [
+                                                        "56px",
+                                                        {
+                                                                "lineHeight": "64px",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "mono-label": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "20px",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "24px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "label-caps": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "16px",
+                                                                "letterSpacing": "0.1em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "28px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "display-xl": [
+                                                        "72px",
+                                                        {
+                                                                "lineHeight": "80px",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "40px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                html {
+                        scroll-behavior: smooth;
+                }
+
+                .glass-panel {
+                        background: rgba(43, 43, 43, 0.4);
+                        backdrop-filter: blur(20px);
+                        -webkit-backdrop-filter: blur(20px);
+                        border: 1px solid rgba(169, 138, 128, 0.2);
+                }
+
+                .hero-gradient {
+                        background: linear-gradient(180deg, rgba(19, 19, 19, 0.3) 0%, rgba(19, 19, 19, 0.8) 100%);
+                }
+
+                /* Floating navbar */
+                .floating-nav {
+                        position: fixed;
+                        top: 20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 50;
+                        width: calc(100% - 48px);
+                        max-width: 1200px;
+                        background: rgba(19, 19, 19, 0.55);
+                        backdrop-filter: blur(24px);
+                        -webkit-backdrop-filter: blur(24px);
+                        border: 1px solid rgba(209, 18, 27, 0.18);
+                        border-radius: 999px;
+                        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.04);
+                        transition: all 0.3s ease;
+                }
+
+                .floating-nav:hover {
+                        border-color: rgba(209, 18, 27, 0.35);
+                        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(209, 18, 27, 0.08);
+                }
+
+                /* Scroll Reveal Animation */
+                .reveal {
+                        opacity: 0;
+                        transform: translateY(30px);
+                        transition: all 0.8s ease-out;
+                }
+
+                .reveal.active {
+                        opacity: 1;
+                        transform: translateY(0);
+                }
+        </style>
 </head>
+
 <body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
-<!-- Navigation - Floating -->
-<nav class="floating-nav">
-<div class="flex justify-between items-center px-6 md:px-8 py-4">
-    <a href="index.html" class="flex items-center hover:opacity-90">
-        <img src="logo.png" alt="Mahakali Engineering Logo" class="h-12 w-auto object-contain">
-    </a>
-    <div class="hidden md:flex gap-2 items-center text-sm font-medium" style="font-family: 'Inter', sans-serif;">
-        <a class="text-[#f15a24] bg-white/5 font-semibold border-b border-[#f15a24]/30 px-4 py-2 rounded-full transition-all duration-200" href="index.html">Home</a>
-        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="legacy_leadership.html">About</a>
-        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="projects_gallery.html">Services</a>
-        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="industries_clients.html">Industries</a>
-        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="industrial_resources.html">Resources</a>
-    </div>
-    <a class="hidden md:inline-flex items-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg" href="contact_engineering.html" style="background:#f15a24;">
-        Contact
-    </a>
-    <button class="md:hidden text-on-surface" onclick="const m = document.getElementById('mobile-menu'); m.classList.toggle('hidden')">
-        <span class="material-symbols-outlined text-3xl">menu</span>
-    </button>
-</div>
-<!-- Mobile Menu Placeholder -->
-<div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 flex flex-col gap-4 border-t border-white/10" style="font-family: 'Inter', sans-serif;">
-    <a class="text-on-surface/80 hover:text-white" href="index.html">Home</a>
-    <a class="text-on-surface/80 hover:text-white" href="legacy_leadership.html">About</a>
-    <a class="text-on-surface/80 hover:text-white" href="projects_gallery.html">Services</a>
-    <a class="text-on-surface/80 hover:text-white" href="industries_clients.html">Industries</a>
-    <a class="text-on-surface/80 hover:text-white" href="industrial_resources.html">Resources</a>
-    <a class="inline-flex items-center justify-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90" href="contact_engineering.html" style="background:#f15a24; max-width: 200px;">
-        Contact
-    </a>
-</div>
-</nav>
-<!-- Hero Section -->
-<header class="relative w-full h-screen min-h-[800px] flex items-center pt-24">
-<div class="absolute inset-0 z-0">
-<img alt="Modern automated factory" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuYODLhySLmPD7eE3vBB6BRnxa2Zv1TP6MXB61FtQp79nhT5XUFAv5Ep9gUqFW0CfDOv3_6zRFgNTjKLFjvN7rvbdODff2MlRy2DO3wkkI7JV9t_b2zJDgYGQBeDjej838upHUGx8g8xDNjOKnB6GnnTs65kIy13_w6SGiU8wbXD1dKBNZCLN-JTseDy2TND74KIWwSvqRZg2lnlj8bIrmWtA1KbBshFYxnWqf5qKrJLyjmV8aHxG9CGvjogbq7gijFQ"/>
-<div class="absolute inset-0 hero-gradient"></div>
-</div>
-<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-start">
-<div class="flex items-center gap-3 mb-6">
-<div class="w-3 h-3 rounded-full bg-primary-container"></div>
-<span class="font-mono-label text-mono-label text-on-surface tracking-wider uppercase">Built to perform</span>
-</div>
-<h1 class="font-display-xl text-display-xl text-on-surface max-w-4xl mb-8 leading-tight">
-                Precision in <br/>
-                every process
-            </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
-                Delivering reliable industrial solutions with efficiency, safety, and scale. We engineer the future of manufacturing through advanced robotics and automation.
-            </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="bg-surface text-on-surface px-8 py-4 rounded font-bold hover:bg-surface-variant transition-colors text-center border border-outline-variant" href="legacy_leadership.html">
-                    About Us
-                </a>
-<a class="glass-panel text-on-surface px-8 py-4 rounded font-bold hover:bg-white/10 transition-colors text-center" href="legacy_leadership.html">
-                    Explore Our Company
-                </a>
-</div>
-</div>
-</header>
-<!-- About Company Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<h2 class="font-display-lg text-display-lg text-on-surface mb-8">Engineering Excellence at Global Scale</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
-                    For over three decades, Mahakali Engineering has set the standard for high-performance manufacturing environments. Our approach combines rigorous engineering principles with cutting-edge industrial technology to solve the most complex operational challenges.
-                </p>
-<div class="grid grid-cols-2 gap-8">
-<div class="border-l-2 border-primary-container pl-6">
-<div class="font-display-lg text-display-lg text-primary-container mb-2">25+</div>
-<div class="font-mono-label text-mono-label text-on-surface-variant uppercase tracking-wider">Global Locations</div>
-</div>
-<div class="border-l-2 border-primary-container pl-6">
-<div class="font-display-lg text-display-lg text-primary-container mb-2">1.5k</div>
-<div class="font-mono-label text-mono-label text-on-surface-variant uppercase tracking-wider">Expert Engineers</div>
-</div>
-</div>
-</div>
-<div class="relative h-[600px] rounded-lg overflow-hidden border border-outline-variant/30">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="A cinematic, high-contrast photograph of a pristine, modern engineering facility. Large-scale metallic components are being assembled in a vast, dark environment illuminated by bright, cool-toned overhead lights and warm industrial orange accent lighting. The aesthetic is extremely technical, stoic, and precise, resembling a high-end Fortune 500 manufacturing floor. Sharp focus, deep depth of field." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDL1tq-VEd_GSfX2p8GorkYA_OIkjRLz5aNt2q-1xu_LtHOO6zsgE0mevXODbkG80B0WGNKv9rFCbEnUiG_7CjCzRDNhyHLzoCzRvZR2UJ61Rlpzf-Rht5eD8GPyzb9n8g3OVOooFV3UhIqPJb_Jx93moiZliJf7aY9ln-fh1WTADCApGIJuJpizf8ZVhlHmS9tpViWcqlDXe-_qi7fZxepf-dzxvoFudiea14GsFCSD_8M4CuZkW2')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-80"></div>
-</div>
-</div>
-</section>
-<!-- Footer (From JSON) -->
-<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant mt-section-gap">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
-<div class="col-span-1 md:col-span-1">
-<div class="mb-6">
-                    <img src="logo.png" alt="Mahakali Engineering Logo" class="h-20 w-auto object-contain">
+        <!-- Navigation - Floating -->
+        <nav class="floating-nav">
+                <div class="flex justify-between items-center px-6 md:px-8 py-4">
+                        <a href="index.html" class="flex items-center hover:opacity-90">
+                                <img src="logo1.png" alt="Mahakali Engineering Logo" class="h-12 w-auto object-contain">
+                        </a>
+                        <div class="hidden md:flex gap-2 items-center text-sm font-medium"
+                                style="font-family: 'Inter', sans-serif;">
+                                <a class="text-[#d1121b] bg-white/5 font-semibold border-b border-[#d1121b]/30 px-4 py-2 rounded-full transition-all duration-200"
+                                        href="index.html">Home</a>
+                                <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200"
+                                        href="legacy_leadership.html">About</a>
+                                <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200"
+                                        href="projects_gallery.html">Services</a>
+                                <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200"
+                                        href="industries_clients.html">Industries</a>
+                                <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200"
+                                        href="industrial_resources.html">Resources</a>
+                        </div>
+                        <a class="hidden md:inline-flex items-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg"
+                                href="contact_engineering.html" style="background:#d1121b;">
+                                Contact
+                        </a>
+                        <button class="md:hidden text-on-surface"
+                                onclick="const m = document.getElementById('mobile-menu'); m.classList.toggle('hidden')">
+                                <span class="material-symbols-outlined text-3xl">menu</span>
+                        </button>
                 </div>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                    © 2024 Mahakali Engineering. Engineering the Future of Manufacturing.
-                </p>
-</div>
-<div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-8 font-body-md text-body-md">
-<div class="flex flex-col gap-4">
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Sitemap</a>
-</div>
-<div class="flex flex-col gap-4">
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
-</div>
-<div class="flex flex-col gap-4">
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
-</div>
-<div class="flex flex-col gap-4">
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Newsletter Signup</a>
-</div>
-</div>
-</div>
-</footer>
+                <!-- Mobile Menu Placeholder -->
+                <div id="mobile-menu"
+                        class="hidden md:hidden px-6 pb-6 pt-2 flex flex-col gap-4 border-t border-white/10"
+                        style="font-family: 'Inter', sans-serif;">
+                        <a class="text-on-surface/80 hover:text-white" href="index.html">Home</a>
+                        <a class="text-on-surface/80 hover:text-white" href="legacy_leadership.html">About</a>
+                        <a class="text-on-surface/80 hover:text-white" href="projects_gallery.html">Services</a>
+                        <a class="text-on-surface/80 hover:text-white" href="industries_clients.html">Industries</a>
+                        <a class="text-on-surface/80 hover:text-white" href="industrial_resources.html">Resources</a>
+                        <a class="inline-flex items-center justify-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90"
+                                href="contact_engineering.html" style="background:#d1121b; max-width: 200px;">
+                                Contact
+                        </a>
+                </div>
+        </nav>
+        <!-- Hero Section -->
+        <header class="relative w-full h-screen min-h-[800px] flex items-center pt-24">
+                <div class="absolute inset-0 z-0">
+                        <img alt="Modern automated factory" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuYODLhySLmPD7eE3vBB6BRnxa2Zv1TP6MXB61FtQp79nhT5XUFAv5Ep9gUqFW0CfDOv3_6zRFgNTjKLFjvN7rvbdODff2MlRy2DO3wkkI7JV9t_b2zJDgYGQBeDjej838upHUGx8g8xDNjOKnB6GnnTs65kIy13_w6SGiU8wbXD1dKBNZCLN-JTseDy2TND74KIWwSvqRZg2lnlj8bIrmWtA1KbBshFYxnWqf5qKrJLyjmV8aHxG9CGvjogbq7gijFQ" />
+                        <div class="absolute inset-0 hero-gradient"></div>
+                </div>
+                <div
+                        class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-start">
+                        <div class="flex items-center gap-3 mb-6">
+                                <div class="w-3 h-3 rounded-full bg-primary-container"></div>
+                                <span class="font-mono-label text-mono-label text-on-surface tracking-wider uppercase">Built
+                                        to perform</span>
+                        </div>
+                        <h1 class="font-display-xl text-display-xl text-on-surface max-w-4xl mb-8 leading-tight">
+                                Precision in <br />
+                                every process
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                                Delivering reliable industrial solutions with efficiency, safety, and scale. We engineer
+                                the future of manufacturing through advanced robotics and automation.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                                <a class="bg-surface text-on-surface px-8 py-4 rounded font-bold hover:bg-surface-variant transition-colors text-center border border-outline-variant"
+                                        href="legacy_leadership.html">
+                                        About Us
+                                </a>
+                                <a class="glass-panel text-on-surface px-8 py-4 rounded font-bold hover:bg-white/10 transition-colors text-center"
+                                        href="legacy_leadership.html">
+                                        Explore Our Company
+                                </a>
+                        </div>
+                </div>
+        </header>
+        <!-- About Company Section -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                                <h2 class="font-display-lg text-display-lg text-on-surface mb-8">Engineering Excellence
+                                        at Global Scale</h2>
+                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                                        For over three decades, Mahakali Engineering has set the standard for
+                                        high-performance manufacturing environments. Our approach combines rigorous
+                                        engineering principles with cutting-edge industrial technology to solve the most
+                                        complex operational challenges.
+                                </p>
+                                <div class="grid grid-cols-2 gap-8">
+                                        <div class="border-l-2 border-primary-container pl-6">
+                                                <div
+                                                        class="font-display-lg text-display-lg text-primary-container mb-2">
+                                                        25+</div>
+                                                <div
+                                                        class="font-mono-label text-mono-label text-on-surface-variant uppercase tracking-wider">
+                                                        Global Locations</div>
+                                        </div>
+                                        <div class="border-l-2 border-primary-container pl-6">
+                                                <div
+                                                        class="font-display-lg text-display-lg text-primary-container mb-2">
+                                                        1.5k</div>
+                                                <div
+                                                        class="font-mono-label text-mono-label text-on-surface-variant uppercase tracking-wider">
+                                                        Expert Engineers</div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="relative h-[600px] rounded-lg overflow-hidden border border-outline-variant/30">
+                                <div class="absolute inset-0 bg-cover bg-center"
+                                        data-alt="A cinematic, high-contrast photograph of a pristine, modern engineering facility. Large-scale metallic components are being assembled in a vast, dark environment illuminated by bright, cool-toned overhead lights and warm industrial orange accent lighting. The aesthetic is extremely technical, stoic, and precise, resembling a high-end Fortune 500 manufacturing floor. Sharp focus, deep depth of field."
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDL1tq-VEd_GSfX2p8GorkYA_OIkjRLz5aNt2q-1xu_LtHOO6zsgE0mevXODbkG80B0WGNKv9rFCbEnUiG_7CjCzRDNhyHLzoCzRvZR2UJ61Rlpzf-Rht5eD8GPyzb9n8g3OVOooFV3UhIqPJb_Jx93moiZliJf7aY9ln-fh1WTADCApGIJuJpizf8ZVhlHmS9tpViWcqlDXe-_qi7fZxepf-dzxvoFudiea14GsFCSD_8M4CuZkW2')">
+                                </div>
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-80">
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Footer (From JSON) -->
+        <footer
+                class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant mt-section-gap">
+                <div
+                        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+                        <div class="col-span-1 md:col-span-1">
+                                <div class="mb-6">
+                                        <img src="logo2.png" alt="Mahakali Engineering Logo"
+                                                class="h-20 w-auto object-contain">
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                        © 2024 Mahakali Engineering. Engineering the Future of Manufacturing.
+                                </p>
+                        </div>
+                        <div
+                                class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-8 font-body-md text-body-md">
+                                <div class="flex flex-col gap-4">
+                                        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors"
+                                                href="#">Sitemap</a>
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors"
+                                                href="#">Privacy Policy</a>
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors"
+                                                href="#">Terms of Service</a>
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors"
+                                                href="#">Newsletter Signup</a>
+                                </div>
+                        </div>
+                </div>
+        </footer>
 
-<!-- Scroll Reveal Script -->
-<script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const reveals = document.querySelectorAll('.reveal');
+        <!-- Scroll Reveal Script -->
+        <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                        const reveals = document.querySelectorAll('.reveal');
 
-            const revealOnScroll = () => {
-                const windowHeight = window.innerHeight;
-                const elementVisible = 150;
+                        const revealOnScroll = () => {
+                                const windowHeight = window.innerHeight;
+                                const elementVisible = 150;
 
-                reveals.forEach((reveal) => {
-                    const elementTop = reveal.getBoundingClientRect().top;
-                    if (elementTop < windowHeight - elementVisible) {
-                        reveal.classList.add('active');
-                    }
+                                reveals.forEach((reveal) => {
+                                        const elementTop = reveal.getBoundingClientRect().top;
+                                        if (elementTop < windowHeight - elementVisible) {
+                                                reveal.classList.add('active');
+                                        }
+                                });
+                        };
+
+                        window.addEventListener('scroll', revealOnScroll);
+                        revealOnScroll(); // Trigger on load
                 });
-            };
-
-            window.addEventListener('scroll', revealOnScroll);
-            revealOnScroll(); // Trigger on load
-        });
-</script>
+        </script>
 </body>
+
 </html>
