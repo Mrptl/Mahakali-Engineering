@@ -278,10 +278,54 @@
             transform: translateY(-9px) rotate(45deg);
         }
 
+    
+        /* Preloader custom animations */
+        @keyframes pulseSlow {
+            0%, 100% { opacity: 0.9; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.98); }
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-pulse-slow {
+            animation: pulseSlow 2s ease-in-out infinite;
+        }
+        .animate-fade-up-custom {
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        /* Lock scroll while loading */
+        body.loading {
+            overflow: hidden !important;
+        }
+        /* Smooth page entrance */
+        .page-reveal-wrapper {
+            opacity: 0;
+            transform: translateY(20px) scale(0.99);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        body.loaded .page-reveal-wrapper {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
     </style>
 </head>
 
-<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden loading">
+
+<!-- Premium Page Preloader -->
+<div id="page-preloader" class="fixed inset-0 z-[9999] bg-[#0e0e0e] flex flex-col items-center justify-center transition-all duration-[800ms] ease-[cubic-bezier(0.85,0,0.15,1)]">
+    <div class="flex flex-col items-center gap-6 animate-pulse-slow">
+        <!-- Logo Image -->
+        <img src="logo.png" alt="Mahakali Engineering Logo" class="h-16 md:h-20 w-auto object-contain animate-fade-up-custom">
+        <!-- Thin Loading Bar Container -->
+        <div class="w-32 md:w-48 h-[2px] bg-white/10 rounded-full overflow-hidden relative">
+            <div id="preloader-bar" class="h-full bg-[#d1121b] rounded-full w-0 transition-all duration-[600ms] ease-out"></div>
+        </div>
+    </div>
+</div>
+
         <!-- Navigation - Floating -->
         <nav class="floating-nav">
                 <div class="flex justify-between items-center px-6 md:px-8 py-4">
@@ -342,6 +386,7 @@
     </a>
 </div>
 </nav>
+<div class="page-reveal-wrapper">
         <!-- Hero Section -->
         <header class="relative w-full h-screen min-h-[800px] flex items-center pt-24">
                 <div class="absolute inset-0 z-0">
@@ -506,6 +551,7 @@
                         </div>
                 </div>
         </footer>
+</div>
 
         <!-- Scroll Reveal Script -->
         <script>
@@ -550,6 +596,35 @@
                     }
                 });
             }
+        });
+</script>
+
+
+<!-- Preloader and Page Reveal Control Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('loading');
+            const bar = document.getElementById('preloader-bar');
+            const preloader = document.getElementById('page-preloader');
+            
+            // 1. Animate loading bar progress
+            setTimeout(() => {
+                if (bar) bar.style.width = '100%';
+            }, 50);
+            
+            // 2. Slide up preloader and reveal content
+            setTimeout(() => {
+                if (preloader) {
+                    preloader.style.transform = 'translateY(-100%)';
+                }
+                document.body.classList.remove('loading');
+                document.body.classList.add('loaded');
+                
+                // 3. Remove preloader from DOM after transition completes
+                setTimeout(() => {
+                    if (preloader) preloader.remove();
+                }, 800);
+            }, 850); 
         });
 </script>
 
