@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Mahakali Engineering</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#454747",
+                        "tertiary": "#c2c7cf",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-container": "#b4b5b5",
+                        "secondary": "#c6c6c7",
+                        "secondary-container": "#454747",
+                        "surface-container": "#20201f",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary": "#ffb59e",
+                        "on-primary-fixed": "#3a0b00",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed": "#dee3eb",
+                        "surface-container-low": "#1c1b1b",
+                        "background": "#131313",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#393939",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed-variant": "#42474e",
+                        "on-primary-container": "#521400",
+                        "outline": "#a98a80",
+                        "surface-container-highest": "#353535",
+                        "primary-fixed": "#ffdbd0",
+                        "on-tertiary-fixed": "#171c22",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary": "#5d1800",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary-container": "#252a31",
+                        "tertiary-fixed-dim": "#c2c7cf",
+                        "on-surface-variant": "#e2bfb4",
+                        "on-secondary": "#2f3131",
+                        "primary-fixed-dim": "#ffb59e",
+                        "on-primary-fixed-variant": "#842500",
+                        "tertiary-container": "#8c9199",
+                        "outline-variant": "#5a4139",
+                        "on-tertiary": "#2c3138",
+                        "secondary-fixed": "#e2e2e2",
+                        "inverse-on-surface": "#313030",
+                        "surface-variant": "#353535",
+                        "on-error": "#690005",
+                        "inverse-primary": "#ad3300",
+                        "surface-tint": "#ffb59e",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "primary-container": "#f75f28"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "container-max": "1440px",
+                        "section-gap": "128px",
+                        "component-gap": "24px",
+                        "margin-desktop": "64px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "display-xl": ["Manrope"],
+                        "mono-label": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, rgba(247, 95, 40, 0.5), transparent);
+            transform: translateX(-50%);
+        }
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 24px;
+                transform: none;
+            }
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background-color: #f75f28;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            box-shadow: 0 0 15px rgba(247, 95, 40, 0.6);
+        }
+        @media (max-width: 768px) {
+            .timeline-dot {
+                left: 24px;
+                transform: translateX(-50%);
+            }
+        }
+    
+        /* Floating navbar */
+        .floating-nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            width: calc(100% - 48px);
+            max-width: 1200px;
+            background: rgba(19, 19, 19, 0.55);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(241, 90, 36, 0.18);
+            border-radius: 999px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04);
+            transition: all 0.3s ease;
+        }
+        .floating-nav:hover {
+            border-color: rgba(241, 90, 36, 0.35);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(241,90,36,0.08);
+        }
+
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-white">
+<!-- Navigation - Floating -->
+<nav class="floating-nav">
+<div class="flex justify-between items-center px-6 md:px-8 py-4">
+    <a href="screen1_code.html" class="font-bold text-on-surface text-lg tracking-tight hover:opacity-90" style="font-family: 'Manrope', sans-serif; letter-spacing: -0.01em;">
+        <span style="color:#f15a24;">Mahakali</span>&nbsp;Engineering
+    </a>
+    <div class="hidden md:flex gap-2 items-center text-sm font-medium" style="font-family: 'Inter', sans-serif;">
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="screen1_code.html">Home</a>
+        <a class="text-[#f15a24] bg-white/5 font-semibold border-b border-[#f15a24]/30 px-4 py-2 rounded-full transition-all duration-200" href="legacy_leadership.html">About</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="projects_gallery.html">Services</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="#">Industries</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="#">Resources</a>
+    </div>
+    <a class="hidden md:inline-flex items-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg" href="contact_engineering.html" style="background:#f15a24;">
+        Contact
+    </a>
+    <button class="md:hidden text-on-surface" onclick="const m = document.getElementById('mobile-menu'); m.classList.toggle('hidden')">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+</div>
+<!-- Mobile Menu Placeholder -->
+<div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 flex flex-col gap-4 border-t border-white/10" style="font-family: 'Inter', sans-serif;">
+    <a class="text-on-surface/80 hover:text-white" href="screen1_code.html">Home</a>
+    <a class="text-on-surface/80 hover:text-white" href="legacy_leadership.html">About</a>
+    <a class="text-on-surface/80 hover:text-white" href="projects_gallery.html">Services</a>
+    <a class="text-on-surface/80 hover:text-white" href="#">Industries</a>
+    <a class="text-on-surface/80 hover:text-white" href="#">Resources</a>
+    <a class="inline-flex items-center justify-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90" href="contact_engineering.html" style="background:#f15a24; max-width: 200px;">
+        Contact
+    </a>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center pt-24">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="A massive, dimly lit industrial manufacturing plant floor with heavy machinery, sparks flying from welding robots, cinematic lighting, dark mode aesthetic, wide angle shot emphasizing scale and power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARrbkoHot3yPJjOXgxf1_VCOFGx8TsWdasjKUKp_A974lDACK7UF-hRNIKub2CCKnLJSaHXGClGKBqrmeYwlgSPfsxgMrQGbwD6fXaLJrSPItfeud45WIeCMGz58P4eRMWtyevjrB70KBeWBtN6CEXa8OxLSAVK-Vt7W8P2qjvYuGcergN3T-uJ7tsKKSQcVLtCDbUoiBAXR2fiAA_JGoY2LkhM7689ZRF7aGZg31SHKZ75r6iV9cq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mt-20">
+<div class="inline-flex items-center space-x-2 mb-6">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Our Legacy</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-white mb-6 leading-tight max-w-5xl mx-auto drop-shadow-2xl">
+                    Engineering the Future Since 1994
+                </h1>
+<p class="font-body-lg text-body-lg text-tertiary max-w-2xl mx-auto">
+                    Three decades of pushing the boundaries of mechanical possibility. We build the systems that build the world.
+                </p>
+</div>
+</section>
+<!-- Mission Statement (Split Layout) -->
+<section class="py-section-gap relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-8 reveal">
+<h2 class="font-display-lg text-display-lg text-white leading-tight border-l-4 border-primary-container pl-6">
+                            Precision at Scale.<br/>
+<span class="text-surface-variant">Innovation by Design.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-secondary">
+                            At Mahakali Engineering, we don't just adapt to the future of manufacturing; we forge it. Our mission is to deliver uncompromising precision in every component, machine, and automated system we deploy globally. We combine heavy-duty engineering with cutting-edge artificial intelligence to create resilient infrastructure for the modern enterprise.
+                        </p>
+<ul class="space-y-4 font-mono-label text-mono-label text-tertiary">
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary-container">done_all</span>
+<span>Zero-Tolerance Quality Control</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary-container">precision_manufacturing</span>
+<span>Automated Production Pipelines</span>
+</li>
+<li class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-primary-container">memory</span>
+<span>AI-Driven Predictive Maintenance</span>
+</li>
+</ul>
+</div>
+<div class="relative h-[600px] rounded-lg overflow-hidden border border-surface-variant reveal group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-alt="A close-up, high-contrast shot of a complex, precision-machined titanium gear assembly. The metal surfaces gleam under focused, cinematic lighting against a stark black background. Intricate details, etched numbers, and flawless engineering are visible. Dark mode, industrial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO44Fuii_rwk2h0OPwK8iK2g6zXhKdLhe1mEbq8uv8ry__Q7Os_eUIwtBYTJKNIGC7nBmCBECO4tBAYWjI4qkl9uWyJUiQODB_vDpvqkfYxxOxKFaN7mFefYBQHc-kRVgF5KCtWRSwyE412QDgJX9oR5-leKtGf2uQD4Vj7zCZfmwVy02XVm7dghU1GCFvVBwU5rjd3jFH3D1b68KVDvM1Ls9br2csfDqJQ16xJ3GpP3A38e6Oy9B6"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container-lowest/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-surface-container-low/90 backdrop-blur-sm border border-outline-variant/30 rounded">
+<p class="font-mono-label text-mono-label text-primary-container mb-1">ASSET: TITANIUM CORE V4</p>
+<p class="font-body-md text-body-md text-secondary">Demonstrating our micro-millimeter precision capabilities in advanced materials.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 30-Year History Timeline -->
+<section class="py-section-gap bg-surface-container-lowest relative overflow-hidden">
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-surface-container/20 to-transparent pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+<div class="text-center mb-20 reveal">
+<h2 class="font-display-lg text-display-lg text-white mb-4">A Legacy of Iron &amp; Code</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">Milestones that defined our trajectory from a small lab to a global powerhouse.</p>
+</div>
+<div class="relative max-w-4xl mx-auto">
+<div class="timeline-line"></div>
+<!-- 1994 -->
+<div class="relative flex flex-col md:flex-row justify-between items-center mb-24 reveal group">
+<div class="hidden md:block w-5/12 text-right pr-12">
+<h3 class="font-display-xl text-display-xl text-surface-variant group-hover:text-primary-container transition-colors duration-300">1994</h3>
+</div>
+<div class="timeline-dot group-hover:scale-150 transition-transform duration-300 mt-2 md:mt-0"></div>
+<div class="w-full md:w-5/12 pl-12 md:pl-12 mt-8 md:mt-0">
+<h3 class="md:hidden font-display-xl text-display-xl text-surface-variant mb-2">1994</h3>
+<div class="bg-surface-container-low p-6 rounded border border-surface-variant hover:border-primary/50 transition-colors">
+<h4 class="font-title-md text-title-md text-white mb-2">Foundation</h4>
+<p class="font-body-md text-body-md text-secondary">Founded in a small engineering lab with a focus on bespoke mechanical tooling for regional manufacturers.</p>
+</div>
+</div>
+</div>
+<!-- 2004 -->
+<div class="relative flex flex-col md:flex-row justify-between items-center mb-24 reveal group">
+<div class="w-full md:w-5/12 pl-12 md:pl-0 md:text-right md:pr-12 mt-8 md:mt-0 order-2 md:order-1">
+<h3 class="md:hidden font-display-xl text-display-xl text-surface-variant mb-2">2004</h3>
+<div class="bg-surface-container-low p-6 rounded border border-surface-variant hover:border-primary/50 transition-colors">
+<h4 class="font-title-md text-title-md text-white mb-2">Global Expansion</h4>
+<p class="font-body-md text-body-md text-secondary">Secured our first international robotics patent and opened our first overseas fabrication facility.</p>
+</div>
+</div>
+<div class="timeline-dot group-hover:scale-150 transition-transform duration-300 mt-2 md:mt-0 order-1 md:order-2"></div>
+<div class="hidden md:block w-5/12 pl-12 order-3">
+<h3 class="font-display-xl text-display-xl text-surface-variant group-hover:text-primary-container transition-colors duration-300">2004</h3>
+</div>
+</div>
+<!-- 2014 -->
+<div class="relative flex flex-col md:flex-row justify-between items-center mb-24 reveal group">
+<div class="hidden md:block w-5/12 text-right pr-12">
+<h3 class="font-display-xl text-display-xl text-surface-variant group-hover:text-primary-container transition-colors duration-300">2014</h3>
+</div>
+<div class="timeline-dot group-hover:scale-150 transition-transform duration-300 mt-2 md:mt-0"></div>
+<div class="w-full md:w-5/12 pl-12 md:pl-12 mt-8 md:mt-0">
+<h3 class="md:hidden font-display-xl text-display-xl text-surface-variant mb-2">2014</h3>
+<div class="bg-surface-container-low p-6 rounded border border-surface-variant hover:border-primary/50 transition-colors">
+<h4 class="font-title-md text-title-md text-white mb-2">Industry 4.0 Pioneer</h4>
+<p class="font-body-md text-body-md text-secondary">Awarded the Industry 4.0 Pioneer Award for integrating IoT sensors into our heavy machinery line.</p>
+</div>
+</div>
+</div>
+<!-- 2024 -->
+<div class="relative flex flex-col md:flex-row justify-between items-center reveal group">
+<div class="w-full md:w-5/12 pl-12 md:pl-0 md:text-right md:pr-12 mt-8 md:mt-0 order-2 md:order-1">
+<h3 class="md:hidden font-display-xl text-display-xl text-surface-variant mb-2">2024</h3>
+<div class="bg-surface-container-low p-6 rounded border border-primary/30 hover:border-primary transition-colors shadow-[0_0_30px_rgba(247,95,40,0.1)]">
+<h4 class="font-title-md text-title-md text-white mb-2 flex items-center md:justify-end">
+<span class="material-symbols-outlined text-primary-container mr-2 md:order-last md:ml-2 md:mr-0">bolt</span>
+                                    AI-Driven Automation
+                                </h4>
+<p class="font-body-md text-body-md text-secondary">Leading the revolution with autonomous manufacturing clusters powered by the Mahakali AI Core.</p>
+</div>
+</div>
+<div class="timeline-dot group-hover:scale-150 transition-transform duration-300 mt-2 md:mt-0 order-1 md:order-2 bg-primary-container shadow-[0_0_20px_#f75f28]"></div>
+<div class="hidden md:block w-5/12 pl-12 order-3">
+<h3 class="font-display-xl text-display-xl text-primary-container">2024</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-surface-variant pb-8 reveal">
+<div>
+<h2 class="font-display-lg text-display-lg text-white mb-4">Visionary Leadership</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">The minds directing the convergence of heavy industry and advanced computation.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Leader 1 -->
+<div class="bg-surface-container-low border border-surface-variant rounded overflow-hidden group reveal">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1u_n-8Nf_l2wivVmpUnGIejbVXFXCtJ992fArXTOJUQQO10Y_3RC93NuBerXgWCBRC5j4QbNm8D8V8r0ynUjFvOWWDDYbKwXqZkdrZTHAzzMKlLXzKD58VdAF_1y0vGkyepzkPKE0eaMVDnoqLy7yobhQhXt-i28m5N5pbV5WH3i5eDCZ3z2u1x3W3yAHX0AnYNxTYvslpQFfkPavO8gp2Ke2HemWS6r0J81SiOL4mVOt9efKxmkF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="p-8 relative">
+<div class="absolute -top-6 right-8 bg-surface border border-surface-variant p-3 rounded-full text-primary-container">
+<span class="material-symbols-outlined">engineering</span>
+</div>
+<h3 class="font-title-md text-title-md text-white mb-1">Marcus Thorne</h3>
+<p class="font-mono-label text-mono-label text-primary-container mb-4">CEO &amp; FOUNDER</p>
+<p class="font-body-md text-body-md text-secondary">"30 years of industrial innovation. We don't guess the future; we engineer it block by block."</p>
+</div>
+</div>
+<!-- Leader 2 -->
+<div class="bg-surface-container-low border border-surface-variant rounded overflow-hidden group reveal" style="transition-delay: 200ms;">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74_0ReBWW_XanoStEUP8jc0ti8QItPj1SAIwe22MFF9rFCT0fZb4H_QtmfwQxVIa49gllUooiyuf47H7zfQdDGOSFHzgiYu9GeIXiDED4MPj7RgjTAwA3zViYRmX4vAxiRvZHhkAa8NOqacoNHexa6P6YWYeIi1Wp36fUPxABrkuG5lCOl4rhaUb4DM4prrrxClgOO-MBR_i9q52tuJ-K3w87m8SrlfgbIaM7odjYv4Wn9DWL6k4I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="p-8 relative">
+<div class="absolute -top-6 right-8 bg-surface border border-surface-variant p-3 rounded-full text-primary-container">
+<span class="material-symbols-outlined">memory</span>
+</div>
+<h3 class="font-title-md text-title-md text-white mb-1">Elena Rodriguez</h3>
+<p class="font-mono-label text-mono-label text-primary-container mb-4">CHIEF TECHNOLOGY OFFICER</p>
+<p class="font-body-md text-body-md text-secondary">"Architect of the Mahakali AI Core. Translating raw data into physical, mechanized action at scale."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Reach -->
+<section class="py-24 border-t border-surface-variant bg-surface-dim">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center reveal">
+<span class="material-symbols-outlined text-display-xl text-surface-variant mb-6">public</span>
+<h3 class="font-display-lg text-display-lg text-white mb-4">Global Operations</h3>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto mb-8">Operating from 25+ strategic locations worldwide, ensuring rapid deployment and hyper-localized support for our enterprise partners.</p>
+<div class="flex justify-center space-x-4">
+<span class="font-mono-label text-mono-label text-tertiary px-4 py-2 border border-surface-variant rounded-full">NORTH AMERICA</span>
+<span class="font-mono-label text-mono-label text-tertiary px-4 py-2 border border-surface-variant rounded-full">EUROPE</span>
+<span class="font-mono-label text-mono-label text-tertiary px-4 py-2 border border-surface-variant rounded-full">ASIA PACIFIC</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<p class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black text-on-surface dark:text-on-surface mb-4">Mahakali Engineering</p>
+<p class="font-body-md text-body-md text-secondary">Engineering the Future of Manufacturing.</p>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-col md:flex-row justify-end space-y-4 md:space-y-0 md:space-x-8 mt-8 md:mt-0">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Sitemap</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Newsletter Signup</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-surface-variant text-center md:text-left">
+<p class="font-mono-label text-mono-label text-tertiary">© 2024 Mahakali Engineering. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Scroll Reveal Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 150;
+
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger on load
+        });
+    </script>
+</body></html>

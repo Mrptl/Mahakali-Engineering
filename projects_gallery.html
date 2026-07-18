@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mahakali Engineering - Projects Gallery</title>
+<!-- Tailwind CSS with container-queries and forms plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#f75f28",
+                    "inverse-primary": "#ad3300",
+                    "outline": "#a98a80",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "background": "#131313",
+                    "tertiary-fixed": "#dee3eb",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-variant": "#353535",
+                    "inverse-surface": "#e5e2e1",
+                    "on-primary-container": "#521400",
+                    "on-error-container": "#ffdad6",
+                    "on-primary": "#5d1800",
+                    "inverse-on-surface": "#313030",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#e2bfb4",
+                    "surface-tint": "#ffb59e",
+                    "outline-variant": "#5a4139",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#171c22",
+                    "surface-container-highest": "#353535",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "secondary-fixed": "#e2e2e2",
+                    "secondary-container": "#454747",
+                    "surface-container": "#20201f",
+                    "secondary": "#c6c6c7",
+                    "primary-fixed": "#ffdbd0",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#c2c7cf",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-secondary-container": "#b4b5b5",
+                    "on-primary-fixed": "#3a0b00",
+                    "on-surface": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "primary": "#ffb59e",
+                    "on-tertiary-fixed-variant": "#42474e",
+                    "surface-container-low": "#1c1b1b",
+                    "surface": "#131313",
+                    "primary-fixed-dim": "#ffb59e",
+                    "on-background": "#e5e2e1",
+                    "on-secondary": "#2f3131",
+                    "surface-bright": "#393939",
+                    "tertiary-container": "#8c9199",
+                    "on-tertiary": "#2c3138",
+                    "on-primary-fixed-variant": "#842500",
+                    "tertiary": "#c2c7cf",
+                    "on-tertiary-container": "#252a31"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "component-gap": "24px",
+                    "margin-mobile": "24px",
+                    "gutter": "32px",
+                    "section-gap": "128px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Manrope"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "mono-label": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Manrope"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Manrope"
+                    ],
+                    "title-md": [
+                            "Manrope"
+                    ],
+                    "display-xl": [
+                            "Manrope"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "56px",
+                            {
+                                    "lineHeight": "64px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "mono-label": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "title-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-xl": [
+                            "72px",
+                            {
+                                    "lineHeight": "80px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    
+        /* Floating navbar */
+        .floating-nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            width: calc(100% - 48px);
+            max-width: 1200px;
+            background: rgba(19, 19, 19, 0.55);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(241, 90, 36, 0.18);
+            border-radius: 999px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04);
+            transition: all 0.3s ease;
+        }
+        .floating-nav:hover {
+            border-color: rgba(241, 90, 36, 0.35);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(241,90,36,0.08);
+        }
+
+    
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-lg antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-white">
+<!-- Navigation - Floating -->
+<nav class="floating-nav">
+<div class="flex justify-between items-center px-6 md:px-8 py-4">
+    <a href="screen1_code.html" class="font-bold text-on-surface text-lg tracking-tight hover:opacity-90" style="font-family: 'Manrope', sans-serif; letter-spacing: -0.01em;">
+        <span style="color:#f15a24;">Mahakali</span>&nbsp;Engineering
+    </a>
+    <div class="hidden md:flex gap-2 items-center text-sm font-medium" style="font-family: 'Inter', sans-serif;">
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="screen1_code.html">Home</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="legacy_leadership.html">About</a>
+        <a class="text-[#f15a24] bg-white/5 font-semibold border-b border-[#f15a24]/30 px-4 py-2 rounded-full transition-all duration-200" href="projects_gallery.html">Services</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="#">Industries</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="#">Resources</a>
+    </div>
+    <a class="hidden md:inline-flex items-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg" href="contact_engineering.html" style="background:#f15a24;">
+        Contact
+    </a>
+    <button class="md:hidden text-on-surface" onclick="const m = document.getElementById('mobile-menu'); m.classList.toggle('hidden')">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+</div>
+<!-- Mobile Menu Placeholder -->
+<div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 flex flex-col gap-4 border-t border-white/10" style="font-family: 'Inter', sans-serif;">
+    <a class="text-on-surface/80 hover:text-white" href="screen1_code.html">Home</a>
+    <a class="text-on-surface/80 hover:text-white" href="legacy_leadership.html">About</a>
+    <a class="text-on-surface/80 hover:text-white" href="projects_gallery.html">Services</a>
+    <a class="text-on-surface/80 hover:text-white" href="#">Industries</a>
+    <a class="text-on-surface/80 hover:text-white" href="#">Resources</a>
+    <a class="inline-flex items-center justify-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90" href="contact_engineering.html" style="background:#f15a24; max-width: 200px;">
+        Contact
+    </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col pt-32 pb-section-gap">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto py-16 md:py-24 flex flex-col items-start relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-3 h-3 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Built to Perform</span>
+</div>
+<h1 class="font-display-xl text-headline-lg-mobile md:text-display-xl text-on-surface max-w-4xl leading-tight mb-8">
+                Global Impact: Engineering Excellence in Action
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Explore our portfolio of industrial automation and robotics implementations across the globe. We build systems designed for resilience, efficiency, and scale in the most demanding environments.
+            </p>
+</section>
+<!-- Filters Section -->
+<section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto mb-12 sticky top-[104px] z-40 bg-background/90 backdrop-blur-md py-4 border-b border-surface-variant">
+<div class="flex overflow-x-auto hide-scrollbar gap-4 items-center">
+<button class="font-mono-label text-mono-label bg-surface-variant text-on-surface px-6 py-2 border border-outline-variant hover:border-primary-container transition-all duration-300 whitespace-nowrap">
+                    All Projects
+                </button>
+<button class="font-mono-label text-mono-label bg-transparent text-on-surface-variant px-6 py-2 border border-transparent hover:border-outline-variant transition-all duration-300 whitespace-nowrap">
+                    Automotive
+                </button>
+<button class="font-mono-label text-mono-label bg-transparent text-on-surface-variant px-6 py-2 border border-transparent hover:border-outline-variant transition-all duration-300 whitespace-nowrap">
+                    Aerospace
+                </button>
+<button class="font-mono-label text-mono-label bg-transparent text-on-surface-variant px-6 py-2 border border-transparent hover:border-outline-variant transition-all duration-300 whitespace-nowrap">
+                    Medical
+                </button>
+<button class="font-mono-label text-mono-label bg-transparent text-on-surface-variant px-6 py-2 border border-transparent hover:border-outline-variant transition-all duration-300 whitespace-nowrap">
+                    Energy
+                </button>
+</div>
+</section>
+<!-- Projects Grid (Bento Style) -->
+<section class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-component-gap reveal">
+<!-- Featured Project (Full Width/Large) -->
+<article class="md:col-span-12 group relative rounded-DEFAULT overflow-hidden bg-surface-container-high border border-outline-variant/30 h-[500px] md:h-[640px] flex items-end">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100 mix-blend-luminosity group-hover:mix-blend-normal" data-alt="A cinematic, ultra-wide angle view of an automated giga-factory floor. Dark mode aesthetic with dramatic, cool industrial lighting. Massive robotic arms in stark silhouette against high-contrast bright white safety lights. Small, intense industrial orange accents highlight structural joints. The mood is powerful, precise, and heavily engineered, reflecting world-class manufacturing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_p2UCv2y6lbMzJl2dltE6huCTWrOsc254jH-7qlpg8OaBphmZt1rtwRglz2XjCf6TX9wFeVo8Qzpf_3HNMKMZhynQIoxtecOTiyC6AWcuanKp5nuth7XcIjI6OP1tjcodCqHZg2KSMa1A-14IWI6NDn-QuCzcA6Ctbm5HgyFznIx5z4khUX5mRPWn_zJxvY7UUFyXr877hvfZUyyFfpNp9oAueSRs8pGolzLulVKCc5eq7PihuxLt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="relative z-10 p-8 md:p-12 w-full md:w-2/3 border-t border-outline-variant/20 bg-background/20 backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-4 block">Aerospace Automation</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">Automated Giga-Factory 01</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">
+                        Comprehensive integration of autonomous robotics for fuselage assembly. Reduced operational downtime by 40% while maintaining micrometer precision across all structural joints.
+                    </p>
+<button class="flex items-center gap-2 font-mono-label text-mono-label text-on-surface group/btn">
+                        View Case Study 
+                        <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Secondary Project Half -->
+<article class="md:col-span-6 group relative rounded-DEFAULT overflow-hidden bg-surface-container border border-outline-variant/30 h-[400px] md:h-[480px] flex items-end">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70 group-hover:opacity-90 grayscale group-hover:grayscale-0" data-alt="A high-contrast macro shot of precision milling machinery working on a solid titanium engine block. Sparks of industrial orange fly against a pure, deep dark background. Sleek metallic surfaces reflect cool studio lighting, showcasing extreme manufacturing precision and industrial strength." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbELGazbjxZ56TMvC24OVF4S7So-Q2sFwdfjVMcWmd5Ilz0aFwqUjkWYwtIkKX7fvQd8isgWmS2auoOH8I-V6R_anRu7ONwxTxkbhmmYUVBEt5o9nWAdgF2PEY8FFUeJOebafgzR6e3_WWRxV9p26mLXV3HM4fPOuYlubMMDOm56itQVCohPrCCBOBPBdjlM4n6gozHZ8CWoyiX8HL_AW10B6_J5zOZHBffR6mZQBUmDWPW0NpzLJn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="relative z-10 p-8 w-full border-t border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-3 block">Automotive Assembly</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-3">Precision Engine Plant X</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                        Next-generation CNC routing systems deployed globally. Ensuring 99.9% uptime for high-volume automotive powertrain production.
+                    </p>
+</div>
+</article>
+<!-- Secondary Project Half -->
+<article class="md:col-span-6 group relative rounded-DEFAULT overflow-hidden bg-surface-container border border-outline-variant/30 h-[400px] md:h-[480px] flex items-end">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70 group-hover:opacity-90 grayscale group-hover:grayscale-0" data-alt="A sprawling offshore energy platform at dusk, captured in a dramatic, cinematic wide shot. The structure is heavily stylized in a dark mode aesthetic, surrounded by deep grey ocean waters. Glowing industrial orange hazard lights punctuate the massive steel architecture, conveying immense scale and industrial resilience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKUgy_SEYGi_w4RSjTpU3eEnzvSTFcWjzdVRciRKqtUmjQkUPkF9MsuWiD76LxDc8wLAslCYTUzF_o5e9cb44tWQtGI3ZZtifl_kvIq6hCYCfPhly1uGug03_hkpqjG3LOAAc9ET5xd3B05nz9CLrgqQhN4J2dg7JcDU-3ZfrhkIQfI2emowmauF2LVEEF2k8iWefKJM7sAz_hlFKS5eKCmG7mVkhcvwcCwYCLiGvwk1CkRS7nw_Tx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="relative z-10 p-8 w-full border-t border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-3 block">Energy Infrastructure</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-3">Offshore Platform Delta</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                        Automated structural monitoring and robotics-assisted drilling control, operating flawlessly in extreme maritime conditions.
+                    </p>
+</div>
+</article>
+</section>
+</main>
+<!-- Navigation Shell: Footer -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant py-section-gap px-margin-mobile md:px-margin-desktop mt-auto flex flex-col md:flex-row justify-between items-center z-40 relative">
+<div class="flex flex-col items-center md:items-start mb-8 md:mb-0 gap-4">
+<div class="font-display-lg text-headline-lg text-on-surface">
+                MAHAKALI ENGINEERING
+            </div>
+<p class="font-body-md text-body-md text-primary opacity-80">
+                © 2024 MAHAKALI ENGINEERING. PRECISION ENGINEERING AT SCALE.
+            </p>
+</div>
+<div class="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors opacity-80 hover:opacity-100" href="#">Compliance</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors opacity-80 hover:opacity-100" href="#">Global Offices</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors opacity-80 hover:opacity-100" href="contact_engineering.html">Contact Engineering</a>
+</div>
+</footer>
+
+<!-- Scroll Reveal Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 150;
+
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger on load
+        });
+</script>
+</body>
+</html>

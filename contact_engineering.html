@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact MAHAKALI ENGINEERING</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#ffb59e",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#42474e",
+                    "on-primary-container": "#521400",
+                    "on-error": "#690005",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "background": "#131313",
+                    "surface-container-low": "#1c1b1b",
+                    "primary": "#ffb59e",
+                    "on-secondary-fixed-variant": "#454747",
+                    "tertiary-fixed-dim": "#c2c7cf",
+                    "on-surface-variant": "#e2bfb4",
+                    "tertiary": "#c2c7cf",
+                    "secondary": "#c6c6c7",
+                    "tertiary-fixed": "#dee3eb",
+                    "inverse-surface": "#e5e2e1",
+                    "outline": "#a98a80",
+                    "inverse-primary": "#ad3300",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-surface": "#e5e2e1",
+                    "surface-container-highest": "#353535",
+                    "primary-container": "#f75f28",
+                    "surface-dim": "#131313",
+                    "inverse-on-surface": "#313030",
+                    "on-primary-fixed-variant": "#842500",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary-container": "#454747",
+                    "on-tertiary": "#2c3138",
+                    "surface-variant": "#353535",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "on-tertiary-fixed": "#171c22",
+                    "surface-container": "#20201f",
+                    "primary-fixed": "#ffdbd0",
+                    "tertiary-container": "#8c9199",
+                    "on-secondary-container": "#b4b5b5",
+                    "on-secondary": "#2f3131",
+                    "on-primary": "#5d1800",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#393939",
+                    "surface": "#131313",
+                    "on-background": "#e5e2e1",
+                    "outline-variant": "#5a4139",
+                    "on-tertiary-container": "#252a31",
+                    "primary-fixed-dim": "#ffb59e",
+                    "on-primary-fixed": "#3a0b00",
+                    "error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "component-gap": "24px",
+                    "section-gap": "128px",
+                    "margin-mobile": "24px",
+                    "margin-desktop": "64px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "mono-label": ["Inter"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "label-caps": ["Inter"],
+                    "display-xl": ["Manrope"],
+                    "title-md": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "mono-label": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "title-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #131313; /* background token */
+            color: #e5e2e1; /* on-background token */
+        }
+    
+        /* Floating navbar */
+        .floating-nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            width: calc(100% - 48px);
+            max-width: 1200px;
+            background: rgba(19, 19, 19, 0.55);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(241, 90, 36, 0.18);
+            border-radius: 999px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04);
+            transition: all 0.3s ease;
+        }
+        .floating-nav:hover {
+            border-color: rgba(241, 90, 36, 0.35);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(241,90,36,0.08);
+        }
+
+    
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- Navigation - Floating -->
+<nav class="floating-nav">
+<div class="flex justify-between items-center px-6 md:px-8 py-4">
+    <a href="screen1_code.html" class="font-bold text-on-surface text-lg tracking-tight hover:opacity-90" style="font-family: 'Manrope', sans-serif; letter-spacing: -0.01em;">
+        <span style="color:#f15a24;">Mahakali</span>&nbsp;Engineering
+    </a>
+    <div class="hidden md:flex gap-2 items-center text-sm font-medium" style="font-family: 'Inter', sans-serif;">
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="screen1_code.html">Home</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="legacy_leadership.html">About</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="projects_gallery.html">Services</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="#">Industries</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="#">Resources</a>
+    </div>
+    <a class="hidden md:inline-flex items-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg" href="contact_engineering.html" style="background:#f15a24;">
+        Contact
+    </a>
+    <button class="md:hidden text-on-surface" onclick="const m = document.getElementById('mobile-menu'); m.classList.toggle('hidden')">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+</div>
+<!-- Mobile Menu Placeholder -->
+<div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 flex flex-col gap-4 border-t border-white/10" style="font-family: 'Inter', sans-serif;">
+    <a class="text-on-surface/80 hover:text-white" href="screen1_code.html">Home</a>
+    <a class="text-on-surface/80 hover:text-white" href="legacy_leadership.html">About</a>
+    <a class="text-on-surface/80 hover:text-white" href="projects_gallery.html">Services</a>
+    <a class="text-on-surface/80 hover:text-white" href="#">Industries</a>
+    <a class="text-on-surface/80 hover:text-white" href="#">Resources</a>
+    <a class="inline-flex items-center justify-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90" href="contact_engineering.html" style="background:#f15a24; max-width: 200px;">
+        Contact
+    </a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] pb-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto flex flex-col lg:flex-row gap-gutter lg:gap-[128px]">
+<!-- Left Column: Context & Contact Info -->
+<div class="w-full lg:w-5/12 flex flex-col gap-component-gap reveal">
+<div>
+<h1 class="font-display-lg text-display-xl font-bold text-on-surface mb-6 leading-tight">
+                    Let's Build the Future Together
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Partner with our global engineering team to scale your industrial operations with precision and intelligence.
+                </p>
+</div>
+<div class="mt-12 flex flex-col gap-8">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Global Headquarters</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            100 Precision Drive<br/>
+                            Industrial Park, Sector 4<br/>
+                            Metropolis, NY 10001
+                        </p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1">mail</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Engineering &amp; Support</h3>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="mailto:engineering@mahakali.engineering">
+                            engineering@mahakali.engineering
+                        </a>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1">phone</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Global Operations Line</h3>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="tel:+18005550199">
+                            +1 (800) 555-0199
+                        </a>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant flex gap-6">
+<a aria-label="LinkedIn" class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="Twitter" class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Right Column: Form -->
+<div class="w-full lg:w-7/12 mt-12 lg:mt-0 reveal">
+<div class="bg-surface-container-high border border-outline-variant rounded-xl p-8 lg:p-12 relative overflow-hidden">
+<!-- Decorative element reflecting technical precision -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full pointer-events-none"></div>
+<div class="absolute top-4 right-4 text-primary/20 pointer-events-none">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mb-8">Project Inquiry</h2>
+<form class="flex flex-col gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-mono-label text-mono-label text-on-surface-variant" for="name">Full Name</label>
+<input class="bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-body-md text-body-md py-3 px-0 transition-colors bg-transparent border-t-0 border-l-0 border-r-0 placeholder-on-surface-variant/50" id="name" placeholder="Jane Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-mono-label text-mono-label text-on-surface-variant" for="company">Company Name</label>
+<input class="bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-body-md text-body-md py-3 px-0 transition-colors bg-transparent border-t-0 border-l-0 border-r-0 placeholder-on-surface-variant/50" id="company" placeholder="Acme Corp" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-mono-label text-mono-label text-on-surface-variant" for="email">Work Email</label>
+<input class="bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-body-md text-body-md py-3 px-0 transition-colors bg-transparent border-t-0 border-l-0 border-r-0 placeholder-on-surface-variant/50" id="email" placeholder="jane.doe@acme.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-mono-label text-mono-label text-on-surface-variant" for="industry">Industry</label>
+<select class="bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-body-md text-body-md py-3 px-0 transition-colors bg-transparent border-t-0 border-l-0 border-r-0 appearance-none cursor-pointer" id="industry">
+<option class="bg-surface-container-high text-on-surface-variant" disabled="" selected="" value="">Select an industry</option>
+<option class="bg-surface-container-high text-on-surface" value="manufacturing">Heavy Manufacturing</option>
+<option class="bg-surface-container-high text-on-surface" value="aerospace">Aerospace &amp; Defense</option>
+<option class="bg-surface-container-high text-on-surface" value="automotive">Automotive</option>
+<option class="bg-surface-container-high text-on-surface" value="energy">Energy &amp; Utilities</option>
+<option class="bg-surface-container-high text-on-surface" value="other">Other</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-mono-label text-mono-label text-on-surface-variant" for="scope">Project Scope</label>
+<textarea class="bg-surface-container-low border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-body-md text-body-md py-3 px-0 transition-colors bg-transparent border-t-0 border-l-0 border-r-0 placeholder-on-surface-variant/50 resize-none" id="scope" placeholder="Briefly describe your engineering requirements..." rows="4"></textarea>
+</div>
+<button class="mt-4 w-full md:w-auto self-start bg-primary-container hover:bg-primary text-on-primary-container font-label-caps text-label-caps px-8 py-4 rounded transition-colors duration-300" type="button">
+                        SUBMIT INQUIRY
+                    </button>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest flex flex-col md:flex-row justify-between items-center px-margin-desktop py-section-gap w-full border-t border-outline-variant flat no shadows z-40">
+<div class="font-display-lg text-headline-lg text-on-surface mb-8 md:mb-0">
+            © 2024 MAHAKALI ENGINEERING. PRECISION ENGINEERING AT SCALE.
+        </div>
+<nav class="flex flex-wrap gap-6 justify-center md:justify-end">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Compliance</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Global Offices</a>
+<a class="font-body-md text-body-md text-primary hover:text-primary-container transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Contact Engineering</a>
+</nav>
+</footer>
+
+<!-- Scroll Reveal Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 150;
+
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger on load
+        });
+</script>
+</body>
+</html>
