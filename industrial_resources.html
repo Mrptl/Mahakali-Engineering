@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Industrial Resources - Mahakali Engineering</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#f75f28",
+                        "inverse-primary": "#ad3300",
+                        "surface": "#131313",
+                        "surface-bright": "#393939",
+                        "on-tertiary-container": "#252a31",
+                        "on-secondary-container": "#b4b5b5",
+                        "primary-fixed-dim": "#ffb59e",
+                        "on-error": "#690005",
+                        "surface-variant": "#353535",
+                        "on-tertiary": "#2c3138",
+                        "tertiary": "#c2c7cf",
+                        "tertiary-fixed-dim": "#c2c7cf",
+                        "tertiary-fixed": "#dee3eb",
+                        "outline": "#a98a80",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed": "#3a0b00",
+                        "error-container": "#93000a",
+                        "secondary": "#c6c6c7",
+                        "on-primary-container": "#521400",
+                        "secondary-fixed": "#e2e2e2",
+                        "secondary-container": "#454747",
+                        "on-background": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#5d1800",
+                        "surface-dim": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "outline-variant": "#5a4139",
+                        "on-tertiary-fixed": "#171c22",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface-variant": "#e2bfb4",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-secondary": "#2f3131",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#842500",
+                        "on-tertiary-fixed-variant": "#42474e",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-tint": "#ffb59e",
+                        "surface-container": "#20201f",
+                        "surface-container-highest": "#353535",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "tertiary-container": "#8c9199",
+                        "background": "#131313",
+                        "primary-fixed": "#ffdbd0",
+                        "primary": "#ffb59e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "128px",
+                        "margin-mobile": "24px",
+                        "margin-desktop": "64px",
+                        "component-gap": "24px",
+                        "gutter": "32px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "mono-label": ["Inter"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Manrope"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-xl": ["Manrope"],
+                        "title-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "mono-label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "title-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .glass-panel {
+            background: rgba(43, 43, 43, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(90, 65, 57, 0.3);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(19,19,19,0.2) 0%, rgba(19,19,19,0.9) 100%);
+        }
+        .image-overlay {
+            background: linear-gradient(0deg, rgba(26,26,26,0.9) 0%, rgba(26,26,26,0.2) 100%);
+        }
+    
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Floating navbar */
+        .floating-nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            width: calc(100% - 48px);
+            max-width: 1200px;
+            background: rgba(19, 19, 19, 0.55);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(241, 90, 36, 0.18);
+            border-radius: 999px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04);
+            transition: all 0.3s ease;
+        }
+        .floating-nav:hover {
+            border-color: rgba(241, 90, 36, 0.35);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(241,90,36,0.08);
+        }
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body class="font-body-md antialiased min-h-screen flex flex-col">
+<!-- Navigation - Floating -->
+<nav class="floating-nav">
+<div class="flex justify-between items-center px-6 md:px-8 py-4">
+    <a href="index.html" class="font-bold text-on-surface text-lg tracking-tight hover:opacity-90" style="font-family: 'Manrope', sans-serif; letter-spacing: -0.01em;">
+        <span style="color:#f15a24;">Mahakali</span>&nbsp;Engineering
+    </a>
+    <div class="hidden md:flex gap-2 items-center text-sm font-medium" style="font-family: 'Inter', sans-serif;">
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="index.html">Home</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="legacy_leadership.html">About</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="projects_gallery.html">Services</a>
+        <a class="text-on-surface/80 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-200" href="industries_clients.html">Industries</a>
+        <a class="text-[#f15a24] bg-white/5 font-semibold border-b border-[#f15a24]/30 px-4 py-2 rounded-full transition-all duration-200" href="industrial_resources.html">Resources</a>
+    </div>
+    <a class="hidden md:inline-flex items-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg" href="contact_engineering.html" style="background:#f15a24;">
+        Contact
+    </a>
+    <button class="md:hidden text-on-surface" onclick="const m = document.getElementById('mobile-menu'); m.classList.toggle('hidden')">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+</div>
+<!-- Mobile Menu Placeholder -->
+<div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 flex flex-col gap-4 border-t border-white/10" style="font-family: 'Inter', sans-serif;">
+    <a class="text-on-surface/80 hover:text-white" href="index.html">Home</a>
+    <a class="text-on-surface/80 hover:text-white" href="legacy_leadership.html">About</a>
+    <a class="text-on-surface/80 hover:text-white" href="projects_gallery.html">Services</a>
+    <a class="text-on-surface/80 hover:text-white" href="industries_clients.html">Industries</a>
+    <a class="text-on-surface/80 hover:text-white" href="industrial_resources.html">Resources</a>
+    <a class="inline-flex items-center justify-center bg-primary-container text-white px-5 py-2 rounded-full text-sm font-bold hover:opacity-90" href="contact_engineering.html" style="background:#f15a24; max-width: 200px;">
+        Contact
+    </a>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full h-[70vh] min-h-[600px] flex items-end pb-section-gap">
+<div class="absolute inset-0 z-0">
+<img alt="Advanced Industrial Machinery" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/AP1WRLuy8iH-DCrvs4VsEM2OlzxOypbaZR9UzaS7_HMb-mD1kYzvvlr1zL0L7Mo63D2EWPn94RAGJ4kIVDVqwVSWqWND5UD_6ORjFJVZPycOjx5EH1MZkQtBis_3gPVdZcXsGYA5WB4HX1fD6LH0jhLoGSRFDs75c48fRP_IywAtmEDxigTpjDViERNKohUhq0cp0uj-ujDw_lSBgUAYHNI8V1ixpb-p_SE11s_adUmdtJGs2KO0z7Pyaw85y-g"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<span class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary uppercase tracking-widest mb-4">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        Resource Center
+                    </span>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-6 leading-tight">Advanced Industrial Resources</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Uncompromising precision. Explore our comprehensive suite of manufacturing infrastructure, robotic automation, and structural engineering tools designed for planetary-scale operations.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Machinery & Tools Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
+<div class="flex justify-between items-end mb-16 border-b border-outline-variant/30 pb-4">
+<h2 class="font-display-lg text-display-lg text-on-surface">Machinery &amp; Tools</h2>
+<div class="hidden md:flex gap-4">
+<button class="flex items-center justify-center w-12 h-12 rounded border border-outline-variant text-on-surface hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="flex items-center justify-center w-12 h-12 rounded border border-outline-variant text-on-surface hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-component-gap">
+<!-- Card 1 -->
+<div class="glass-panel rounded-lg overflow-hidden group cursor-pointer border border-outline-variant/20 hover:border-primary/50 transition-colors duration-500 flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-contrast close up of a massive, dark grey CNC milling machine cutting titanium. Sparks fly slightly. The lighting is dramatic, echoing a high-end luxury dark-mode industrial aesthetic with sharp orange accent lights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgZZmucptqbelRML94GTajt2Y2LZCiBYQBAE2hHZKUIWNSyEz5Ufl2dMW8lTPzGj3s64p7Dis0Xc2gKZ7gxS8QkVYmByNe6z1R-US4mnltJfkkoQe81BnnJILNgVtlj5szAfdB7j1OQeXrM2BYEVZztPx_V0ZjV1cW3BDUaZoHob67lNH4MZpS8l157Qj-eiCX6LPCmAYWA67GdLq-ZR4dniQPwDTvxXOT-WRMsUE3w9royJLhYKZo')"></div>
+<div class="absolute inset-0 image-overlay"></div>
+<div class="absolute top-4 right-4 flex gap-2">
+<span class="bg-surface-container-high/80 backdrop-blur px-3 py-1 rounded text-label-caps font-label-caps text-on-surface border border-outline-variant/30">CNC-X9</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface mb-3">Precision CNC Units</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Sub-micron tolerance multi-axis machining centers designed for aerospace and advanced structural fabrication.</p>
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 border-b border-outline-variant/20 pb-2">
+<span class="material-symbols-outlined text-primary text-sm">straighten</span>
+<span class="font-mono-label text-mono-label text-on-surface">0.001mm Tolerance</span>
+</div>
+<div class="flex items-center gap-3 border-b border-outline-variant/20 pb-2">
+<span class="material-symbols-outlined text-primary text-sm">speed</span>
+<span class="font-mono-label text-mono-label text-on-surface">150,000 RPM Spindle</span>
+</div>
+</div>
+<button class="w-full py-4 border border-outline-variant rounded font-mono-label text-mono-label text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container group-hover:border-primary-container transition-all duration-300 flex justify-center items-center gap-2">
+                            View Tech Specs <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel rounded-lg overflow-hidden group cursor-pointer border border-outline-variant/20 hover:border-primary/50 transition-colors duration-500 flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A wide shot of a pristine, dark factory floor featuring several massive articulated robotic arms assembled in a line. The robotic arms are dark carbon fiber with industrial orange joints. Dramatic overhead spotlighting, cinematic minimalism." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAETM-tMkbjLy-vljTY9pZISXMbVupOkQlwpt1OO1vOgcREjbYWvcoP5lcHKWsJaLrYVn26Dn7RjA_VARX76WdVMfXEBTs45VAqq4wZgQJWp287vGrfFjVzf9oCosx_1b2dUNAre1UuS4kECeuCdwU8lSLZSiNz3wl9TdQVXCTdGJ3Pd65-j_8Aua7jVNuY96oSyrh-dr8nTNP18EwfS1mdRbBleETRplvSMLac5azMCJzlSDxAfc7g')"></div>
+<div class="absolute inset-0 image-overlay"></div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface mb-3">Automated Robotics Arms</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">High-payload, 6-axis articulation systems for continuous automated assembly lines and hazardous material handling.</p>
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 border-b border-outline-variant/20 pb-2">
+<span class="material-symbols-outlined text-primary text-sm">weight</span>
+<span class="font-mono-label text-mono-label text-on-surface">2,500kg Payload</span>
+</div>
+<div class="flex items-center gap-3 border-b border-outline-variant/20 pb-2">
+<span class="material-symbols-outlined text-primary text-sm">wifi_tethering</span>
+<span class="font-mono-label text-mono-label text-on-surface">IoT-Enabled Telemetry</span>
+</div>
+</div>
+<button class="w-full py-4 border border-outline-variant rounded font-mono-label text-mono-label text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container group-hover:border-primary-container transition-all duration-300 flex justify-center items-center gap-2">
+                            View Tech Specs <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel rounded-lg overflow-hidden group cursor-pointer border border-outline-variant/20 hover:border-primary/50 transition-colors duration-500 flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An extremely tight macro shot of a laser lithography beam striking a silicon wafer. The surrounding environment is pitch black, illuminated only by the intense, glowing neon orange laser. High-tech, microscopic precision aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGbMq85g_kH0ohZlgRZUXNR2CGADpFbwUXa618wptzANLHovskzsGbstaFVdMBk1Fm_VGvfcFMRBIHwueUTDXlucPmZuaERT0MHDdtNrq9Ay7LsJNgRTJp-t1vX881ks5nD4NMKq-VIBDAUOcH0xgMqRu0wnbkePZyRhZXudUvv-O1K72y18ohpCTU13LKvyYxYhQHxUOEtZktSYd2YEFuDN3EWh6BsKu3BYdKK4sEHt70OOrBFfVg')"></div>
+<div class="absolute inset-0 image-overlay"></div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface mb-3">Laser Lithography Systems</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Extreme ultraviolet (EUV) patterning for next-generation semiconductor fabrication and micro-electromechanical systems.</p>
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 border-b border-outline-variant/20 pb-2">
+<span class="material-symbols-outlined text-primary text-sm">blur_on</span>
+<span class="font-mono-label text-mono-label text-on-surface">3nm Node Capability</span>
+</div>
+<div class="flex items-center gap-3 border-b border-outline-variant/20 pb-2">
+<span class="material-symbols-outlined text-primary text-sm">lens_blur</span>
+<span class="font-mono-label text-mono-label text-on-surface">Class 1 Cleanroom Req</span>
+</div>
+</div>
+<button class="w-full py-4 border border-outline-variant rounded font-mono-label text-mono-label text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container group-hover:border-primary-container transition-all duration-300 flex justify-center items-center gap-2">
+                            View Tech Specs <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-black text-on-surface dark:text-on-surface mb-6">
+                    Mahakali Engineering
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-8">
+                    © 2024 Mahakali Engineering. Engineering the Future of Manufacturing.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Sitemap</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-primary font-bold hover:text-primary transition-colors" href="#">Newsletter Signup</a>
+</div>
+</div>
+</footer>
+
+<!-- Scroll Reveal Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 150;
+
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger on load
+        });
+</script>
+</body>
+</html>
